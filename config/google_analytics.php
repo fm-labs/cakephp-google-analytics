@@ -2,9 +2,9 @@
 
 return [
     'GoogleAnalytics' => [
-        'trackingId' => null,
         'enabled' => true,
         'disableOnDebug' => true,
+        'trackingId' => '',
         //'implementation' => 'gtag',
     ]
 ];

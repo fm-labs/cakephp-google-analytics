@@ -54,16 +54,6 @@ class GoogleAnalyticsPlugin extends BasePlugin
      */
     public function routes(RouteBuilder $routes): void
     {
-        $routes->plugin(
-            'GoogleAnalytics',
-            ['path' => '/google-analytics'],
-            function (RouteBuilder $builder) {
-                // Add custom routes here
-
-                $builder->fallbacks();
-            }
-        );
-        parent::routes($routes);
     }
 
     /**
@@ -74,8 +64,6 @@ class GoogleAnalyticsPlugin extends BasePlugin
      */
     public function middleware(MiddlewareQueue $middlewareQueue): MiddlewareQueue
     {
-        // Add your middlewares here
-
         return $middlewareQueue;
     }
 
@@ -87,8 +75,6 @@ class GoogleAnalyticsPlugin extends BasePlugin
      */
     public function console(CommandCollection $commands): CommandCollection
     {
-        // Add your commands here
-
         $commands = parent::console($commands);
 
         return $commands;
@@ -103,6 +89,5 @@ class GoogleAnalyticsPlugin extends BasePlugin
      */
     public function services(ContainerInterface $container): void
     {
-        // Add your services here
     }
 }
