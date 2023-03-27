@@ -37,7 +37,7 @@ class GoogleAnalyticsHelper extends Helper
             );
 
             // disable in debug mode
-            if (Configure::read('GoogleAnalytics.disableOnDebug')) {
+            if (Configure::read('debug') && Configure::read('GoogleAnalytics.disableOnDebug')) {
                 $devMsg = "Seo: Google analytics tracking script has been disabled in debug mode";
                 $html = "<!-- " . $html . " -->";
                 $html .= sprintf("<script>console.log('%s')</script>", $devMsg);
